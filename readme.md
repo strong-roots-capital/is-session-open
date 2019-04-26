@@ -11,14 +11,26 @@ npm install @strong-roots-capital/is-session-open
 ## Use
 
 ```typescript
-import { isSessionOpen } from '@strong-roots-capital/is-session-open'
-// TODO: describe usage
+import isSessionOpen from '@strong-roots-capital/is-session-open'
+import moment from 'moment'
+
+const now = moment.utc().toDate()
+console.log(now.toISOString())
+//=>2019-04-26T18:45:20.522Z
+
+console.log(isSessionOpen('1D', now))
+//=>false
+
+const startOfDay = moment.utc().startOf('day').toDate()
+console.log(startOfDay.toISOString())
+//=>2019-04-26T00:00:00.000Z
+
+console.log(isSessionOpen('1D', startOfDay))
+//=>true
+
 ```
 
 ## Related
 
-TODO
-
-## Acknowledgments
-
-TODO
+- [market-session](https://github.com/strong-roots-capital/market-session)
+- [is-tradingview-format](https://github.com/strong-roots-capital/is-tradingview-format)
