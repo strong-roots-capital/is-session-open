@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/is-session-open",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Test if a date represents a timeframe's session-open",
   "main": "dist/src/is-session-open.js",
   "types": "dist/src/is-session-open.d.ts",
